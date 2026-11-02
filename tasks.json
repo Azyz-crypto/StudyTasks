@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "title": "do the dishes",
+    "completed": true,
+    "priority": "Low",
+    "due_date": "",
+    "category": "Personal"
+  },
+  {
+    "id": 2,
+    "title": "study",
+    "completed": true,
+    "priority": "High",
+    "due_date": "",
+    "category": "Studies"
+  },
+  {
+    "id": 3,
+    "title": "gym",
+    "completed": true,
+    "priority": "High",
+    "due_date": "2026-10-14",
+    "category": "Studies"
+  },
+  {
+    "id": 4,
+    "title": "meditation",
+    "completed": false,
+    "priority": "Medium",
+    "due_date": "",
+    "category": "Personal"
+  },
+  {
+    "id": 6,
+    "title": "BCH NKRAW",
+    "completed": false,
+    "priority": "Medium",
+    "due_date": "",
+    "category": "Studies"
+  },
+  {
+    "id": 7,
+    "title": "kahwa",
+    "completed": false,
+    "priority": "High",
+    "due_date": "",
+    "category": "Work"
+  }
+]

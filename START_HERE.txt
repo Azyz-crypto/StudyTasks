@@ -1,0 +1,74 @@
+STUDYTASKS - HOW TO OPEN THE PROJECT
+==================================
+
+WINDOWS
+
+1. Download the complete StudyTasks_Streamlit.zip file.
+2. Right-click the ZIP and choose Extract All.
+3. Open the extracted folder containing START.bat and app.py.
+4. Make sure Python 3.13 (64-bit) is installed on the computer.
+   Official download page:
+   https://www.python.org/downloads/release/python-31317/
+   Under Files, select Windows installer (64-bit), then run the installer.
+   The Windows Python launcher must be installed too (included in the installer).
+5. Double-click START.bat.
+
+On the FIRST launch, the launcher creates a local .venv folder and installs
+the dependencies automatically. Internet access is required for this setup.
+Wait for it to finish. You do not need to type any commands or activate anything.
+
+The app then opens in your browser. If it does not, open the Local URL shown
+in the terminal window, normally http://localhost:8501.
+
+For LATER launches, double-click START.bat again. Installation is skipped when
+the dependency list has not changed. Keep the terminal open while using the app.
+Close the terminal when finished. Closing only the browser tab does not stop
+the local server.
+
+Do not double-click app.py: this is a Streamlit application, not a desktop window.
+Do not run files directly inside the ZIP. Keep the complete extracted folder.
+
+SAVED TASKS
+
+The app creates tasks.json automatically after the first saved task change.
+No tasks.json is required for a fresh start. To transfer existing tasks, copy
+that file into the project folder beside app.py before starting the application.
+
+MANUAL WINDOWS LAUNCH (IF NEEDED)
+
+Open the project folder in File Explorer. Type cmd in its address bar and press
+Enter. Run the following commands, one at a time:
+
+py -3.13 -m venv .venv
+.venv\Scripts\python.exe -m pip install -r requirements.txt
+.venv\Scripts\python.exe -m streamlit run app.py
+
+MACOS / LINUX
+
+Install Python 3.13. Open a terminal in this project folder and run:
+
+python3.13 -m venv .venv
+.venv/bin/python -m pip install -r requirements.txt
+.venv/bin/python -m streamlit run app.py
+
+COMMON PROBLEMS
+
+- "app.py does not exist": use START.bat or open the terminal in the folder
+  that actually contains app.py.
+- "No module named streamlit": run START.bat so dependencies install in the
+  project environment, or use the manual commands above.
+- A pandas/Visual Studio build error: check that Python 3.13 is being used.
+  The project dependency versions are not intended for Python 3.15.
+- If you move a folder that already contains .venv, delete only .venv and
+  run START.bat again to recreate it. Keep tasks.json.
+- If port 8501 is busy, open the Local URL actually printed by Streamlit.
+
+INFORMATION FOR THE PROFESSOR
+
+This edition uses Streamlit, opens locally in a browser, and saves tasks in JSON.
+It includes add/edit/complete/delete, priorities, deadlines, categories,
+sorting, filters, percentage summaries, and CSV export.
+
+The original assignment specifies Tkinter and a Listbox. This edition uses
+Streamlit and an interactive table instead; the original Tkinter edition is
+separate. All source code is included for inspection.
